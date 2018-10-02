@@ -1,0 +1,246 @@
+-- phpMyAdmin SQL Dump
+-- version 4.7.4
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 25-09-2018 a las 20:00:49
+-- Versión del servidor: 10.1.29-MariaDB
+-- Versión de PHP: 7.1.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de datos: `eventos`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `datos_usuario`
+--
+
+CREATE TABLE `datos_usuario` (
+  `usuario` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `nombre` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `apellido` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `id` bigint(45) NOT NULL,
+  `telefono` int(11) NOT NULL,
+  `email` varchar(45) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `datos_usuario`
+--
+
+INSERT INTO `datos_usuario` (`usuario`, `nombre`, `apellido`, `id`, `telefono`, `email`) VALUES
+('root', '123', '123', 1, 0, '123'),
+('root', '123', '123', 2, 0, '123'),
+('4', '4', '4', 5, 0, '4'),
+('4', '4', '4', 6, 0, '4'),
+('1', '1', '1', 7, 0, '1'),
+('1', '1', '1', 8, 0, '1'),
+('2', '2', '2', 9, 0, '2'),
+('5', '5', '5', 10, 0, '5'),
+('carmi', 'kdskd', 'kdowkdw', 11, 0, 'kdodk'),
+('carmi', 'kdskd', 'kdowkdw', 12, 0, 'kdodk'),
+('lo', 'lo', 'lo', 13, 0, 'lo'),
+('lo', 'lo', 'lo', 14, 0, 'lo'),
+('lo', 'lo', 'lo', 15, 0, 'lo'),
+('OP', 'OP', 'OP', 16, 0, 'OP'),
+('OP', 'OP', 'OP', 17, 0, 'OP'),
+('LO', 'LO', 'LO', 18, 0, 'LO'),
+('LO', 'LO', 'LO', 19, 0, 'LO'),
+('OP', 'OP', 'OP', 20, 0, 'OP'),
+('OP', 'OP', 'OP', 21, 0, 'OP'),
+('oo', 'oo', 'oo', 22, 0, 'o'),
+('oo', 'oo', 'oo', 23, 0, 'o'),
+('ded', 'dede', 'deffr', 24, 0, 'frfr'),
+('ded', 'dede', 'deffr', 25, 0, 'frfr'),
+('ol', 'ol', 'ol', 26, 0, 'ol'),
+('ol', 'ol', 'ol', 27, 0, 'ol'),
+('p', 'p', 'p', 28, 0, 'p'),
+('kok', 'kok', 'kok', 29, 0, 'kok'),
+('kok', 'kok', 'kok', 30, 0, 'kok'),
+('op', 'op', 'op', 31, 0, 'op'),
+('op', 'op', 'op', 32, 0, 'op'),
+('i', 'i', 'i', 33, 0, 'i'),
+('i', 'i', 'i', 34, 0, 'i'),
+('i', 'i', 'i', 35, 0, 'i'),
+('i', 'i', 'i', 36, 0, 'i'),
+('i', 'i', 'i', 37, 0, 'i'),
+('i', 'i', 'i', 38, 0, 'i'),
+('root', 'root', 'root', 39, 0, 'root'),
+('root', 'root', 'root', 40, 0, 'root'),
+('root', 'root', 'root', 41, 0, 'root'),
+('root', 'root', 'root', 42, 0, 'root'),
+('po', 'po', 'po', 43, 0, 'po'),
+('po', 'po', 'po', 44, 0, 'po');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `publicaciones`
+--
+
+CREATE TABLE `publicaciones` (
+  `id` int(11) NOT NULL,
+  `usuario` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `foto` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `descripcion` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `videos` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `nombre` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `fecha` date NOT NULL,
+  `relevancia` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `t_juegos`
+--
+
+CREATE TABLE `t_juegos` (
+  `id_juego` int(11) NOT NULL,
+  `nombre` varchar(150) DEFAULT NULL,
+  `anio` varchar(150) DEFAULT NULL,
+  `empresa` varchar(150) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `t_juegos`
+--
+
+INSERT INTO `t_juegos` (`id_juego`, `nombre`, `anio`, `empresa`) VALUES
+(1, 'Super Mario Bros 3', '1988', 'Nintendo'),
+(2, 'The Legend of Zelda', '1987', 'Nintendo'),
+(3, 'Super Mario Bros', '1985', 'Nintendo'),
+(4, 'Metroid ', '1986', 'Nintendo'),
+(5, 'Mega Man 2', '1988', 'Capcom'),
+(8, 'Super Mario Bros 2', '1988', 'Nintendo'),
+(12, 'Metal Gear', '1987', 'Konami'),
+(13, 'Mike Tysonʼs Punch Out!', '1987', 'Nintendo'),
+(14, 'Ninja Gaiden', '1988', 'Tecmo'),
+(18, 'R.C. Pro-Am', '1988', 'Rare'),
+(19, 'MicroMachines ', '1991', 'Codemasters'),
+(21, 'Super Mario', '1990', 'Nintendo'),
+(22, 'La mascara', '1993', 'Komani'),
+(23, 'Tank', '1995', 'konami'),
+(24, 'Olympics', '1880', 'konami'),
+(25, 'Root', 'root', 'root'),
+(26, 'lo', 'lo', 'lo');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuario`
+--
+
+CREATE TABLE `usuario` (
+  `usuario` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `contraseña` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `rol` varchar(11) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'usuario'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`usuario`, `email`, `contraseña`, `rol`) VALUES
+('1', '1', 'cfcd208495d565ef66e7dff9f98764da', 'restaurante'),
+('2', '2', 'cfcd208495d565ef66e7dff9f98764da', 'restaurante'),
+('4', '4', 'cfcd208495d565ef66e7dff9f98764da', 'artista'),
+('5', '5', 'cfcd208495d565ef66e7dff9f98764da', 'restaurante'),
+('carmi', 'kdodk', 'be5a8b995abf618247705f284688c579', 'artista'),
+('ded', 'frfr', 'cfcd208495d565ef66e7dff9f98764da', 'artista'),
+('i', 'i', 'cfcd208495d565ef66e7dff9f98764da', 'artista'),
+('kok', 'kok', 'f30a9a1957a341365d926fc18d7d427a', 'artista'),
+('lo', 'lo', 'bd30030d4a141ce960e96c8d78f411db', 'artista'),
+('ol', 'ol', '3fa7f564b6b8e856aec3b130de4e6503', 'artista'),
+('oo', 'o', '65402f90ef3ceb04c9a50fe3b5aa895d', 'artista'),
+('OP', 'OP', 'a1246e8b6861757ae424540b4ca1f324', 'artista'),
+('p', 'p', 'cfcd208495d565ef66e7dff9f98764da', 'artista'),
+('po', 'po', 'bd30030d4a141ce960e96c8d78f411db', 'artista'),
+('root', 'root', '123', '0');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `datos_usuario`
+--
+ALTER TABLE `datos_usuario`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `dat_usu` (`usuario`);
+
+--
+-- Indices de la tabla `publicaciones`
+--
+ALTER TABLE `publicaciones`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `pub_usu` (`usuario`);
+
+--
+-- Indices de la tabla `t_juegos`
+--
+ALTER TABLE `t_juegos`
+  ADD PRIMARY KEY (`id_juego`);
+
+--
+-- Indices de la tabla `usuario`
+--
+ALTER TABLE `usuario`
+  ADD PRIMARY KEY (`usuario`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `datos_usuario`
+--
+ALTER TABLE `datos_usuario`
+  MODIFY `id` bigint(45) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+
+--
+-- AUTO_INCREMENT de la tabla `publicaciones`
+--
+ALTER TABLE `publicaciones`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `t_juegos`
+--
+ALTER TABLE `t_juegos`
+  MODIFY `id_juego` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `datos_usuario`
+--
+ALTER TABLE `datos_usuario`
+  ADD CONSTRAINT `dat_usu` FOREIGN KEY (`usuario`) REFERENCES `usuario` (`usuario`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `publicaciones`
+--
+ALTER TABLE `publicaciones`
+  ADD CONSTRAINT `pub_usu` FOREIGN KEY (`usuario`) REFERENCES `usuario` (`usuario`) ON DELETE CASCADE ON UPDATE CASCADE;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

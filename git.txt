@@ -1,0 +1,18 @@
+status
+add + . los agrega todos
+commit -m "mensaje"
+log navegar en los distintos commits
+checkout desasehe los camios del ultimo commit
+diff ver cambios del archivo
+.gitignore archivos que se quieren ignorar
+branch crear nueva rama
+
+
+git pull origin rama "traer los cambios"
+
+
+git remote add p origin https://github.com/Andtres/test.git
+
+git push -u origin master
+
+git clone https://github.com/Andtres/test.git

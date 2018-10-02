@@ -1,0 +1,53 @@
+
+
+<div class="main mt-5" style="margin-bottom: 750px;">
+    <div>
+
+
+        <h2 class="display-4 text-uppercase font-weight-bold text-center reg">registro</h2>
+        
+        <form onkeypress="return runScriptReg(event)">
+            <div id="_AJAX_REG_">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="user_reg" aria-describedby="emailHelp" placeholder="Nombre de usuario">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="nombre_reg" aria-describedby="emailHelp" placeholder="Nombre(s)">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="apellido_reg" aria-describedby="emailHelp" placeholder="Apellidos">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="email_reg" aria-describedby="emailHelp" placeholder="Email">
+            </div>
+            
+            <div class="form-group">                      
+                <input type="password" class="form-control" id="pass_reg" placeholder="*********">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="pass_reg_dos"  placeholder="Repetir contraseña">
+            </div>
+
+            <select class="form-group" id="rol">
+                <option class="form-control" value="artista">Artista</option>
+                <option class="form-control" value="restaurante">Restaurante</option>
+                <option class="form-control" value="eventos">Evento</option>
+                
+            </select>
+
+
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Recordar</label>
+            </div>
+            <button type="submit" class="btn text-uppercase" onclick="goReg()">registarse</button>                        
+            <a href="#login" class="text-center">Login</a>
+        </form>    
+    </div>        
+</div>
+<script src="view/app/js/reg.js"></script>
+
+
+
+
